@@ -23,4 +23,24 @@ public class Sorting {
 			}
 		}
 	}
+	public static void selectiontionSort(int[] arr)
+	{
+		for(int i=1;i<arr.length;i++)
+		{
+			int k=i;
+
+			for(int j=0;j<i;j++)
+			{
+				if(arr[k]<arr[j])k=j;
+			}
+			if(k!=i)
+			{
+				arr[i]=arr[i]+arr[k];
+				arr[k]=arr[i]-arr[k];
+				arr[i]=arr[i]-arr[k];
+			}
+		
+		}
+	}
+	
 }
